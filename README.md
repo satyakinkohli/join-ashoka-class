@@ -4,7 +4,7 @@ Have a class at the devilish time of 8:30 AM? Perhaps a late lunch means your cl
 
 ## Working Explained
 
-A ***<ins>combination of CRONTAB and python scripts</ins>*** allow you to automatically join your class at Ashoka University (duh, you got to be enrolled at the Univeristy!).
+A ***<ins>combination of CRONTAB and python scripts</ins>*** allows you to automatically join your class at Ashoka University (duh, you got to be enrolled at the Univeristy!).
 - The *CRONTAB script* executes the following function:
   1. run the python script every Monday to Friday at 8:26 AM, 10:06 AM, 11:46 AM, 2:46 PM, 4:26 PM and 6:06 PM (i.e. 4 minutes before any class starts).
 
