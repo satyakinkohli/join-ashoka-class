@@ -21,8 +21,9 @@ A ***<ins>combination of CRONTAB and python scripts</ins>*** allow you to automa
 username = '<ashoka-email-id>'
 password = '<password>'
 ```
-2. Make a [CRONTAB file](https://www.jcchouinard.com/python-automation-with-cron-on-mac/) which contains the following text:
+2. Schedule your computer to wake up automatically atleast 12-15 minutes before the beginning of every class slot
+3. Make a [CRONTAB file](https://www.jcchouinard.com/python-automation-with-cron-on-mac/) which contains the following text:
 ```
 Eventually
 ```
-3. Schedule your computer to wake up automatically atleast 12-15 minutes before the beginning of every class slot
+4. Optional
