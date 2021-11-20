@@ -10,7 +10,7 @@ A ***<ins>combination of CRONTAB and python scripts</ins>*** allows you to autom
 
 - The *python script* executes the following functions:
   1. log in to [AMS](http://ams.ashoka.edu.in/Contents/StudentDashboard.aspx) through your Google account
-  2. open the timetable and select the class which begins in the next 5 minutes that day of the week
+  2. open the timetable and select the class slot which begins in the next 5 minutes that day of the week
   3. alert the user if no class is scheduled and exits the program, or, open the gmeet or zoom link of the upcoming class
   4. close the camera and mic (you don't wanna not do this :p) and join the meeting
 
