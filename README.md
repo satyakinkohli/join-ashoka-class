@@ -6,7 +6,7 @@ Have a class at the devilish time of 8:30 AM? Perhaps a late lunch means your cl
 
 A ***<ins>combination of CRONTAB and python scripts</ins>*** allow you to automatically join your class at Ashoka University (duh, you got to be enrolled at the Univeristy!).
 - The *CRONTAB script* executes the following function:
-  1. run the python script every Monday to Friday at 8:26 AM, 10:06 AM, 11:46 AM, 2:46 PM, 4:26 PM any 6:06 PM (i.e. 4 minutes before any class starts).
+  1. run the python script every Monday to Friday at 8:26 AM, 10:06 AM, 11:46 AM, 2:46 PM, 4:26 PM and 6:06 PM (i.e. 4 minutes before any class starts).
 
 - The *python script* executes the following functions:
   1. log in to [AMS](http://ams.ashoka.edu.in/Contents/StudentDashboard.aspx) through your Google account
@@ -16,7 +16,7 @@ A ***<ins>combination of CRONTAB and python scripts</ins>*** allow you to automa
 
 ## Setup
 
-1. Make a file named `config.py` in the same directory as `main.py`. This file would only contain your Google account's credentials in the following format:
+1. Make a file named `config.py` in the same directory as `main.py`. This file would only contain your Google account's credentials, in the following format:
 ```
 username = '<ashoka-email-id>'
 password = '<password>'
@@ -25,3 +25,4 @@ password = '<password>'
 ```
 Eventually
 ```
+3. Schedule your computer to wake up automatically atleast 12-15 minutes before the beginning of every class slot
