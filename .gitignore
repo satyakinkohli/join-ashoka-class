@@ -1,5 +1,5 @@
 venv/
 *.pyc
-*/.idea/workspace.xml */.idea/tasks.xml
+*/.idea
 config.py
 test.py
