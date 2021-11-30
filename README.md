@@ -22,9 +22,9 @@ username = '<ashoka-email-id>'
 password = '<password>'
 ```
 2. Configure Zoom settings (required specifically for Zoom classes)
-  - In the Zoom app, go to Settings > Video and check ( &#x2611 ) `Stop my video when joining a meeting`
-  - In the Zoom app, go to Settings > Audio and check ( &#x2611 ) `Automatically join computer audio when joinnig a meeting`
-  - In the Zoom app, go to Settings > Audio and check ( &#x2611 ) `Mute my mic when joining meeting`
+  - In the Zoom app, go to Settings > Video and check ( &#x2611; &nbsp; ) `Stop my video when joining a meeting`
+  - In the Zoom app, go to Settings > Audio and check ( &#x2611; &nbsp; ) `Automatically join computer audio when joinnig a meeting`
+  - In the Zoom app, go to Settings > Audio and check ( &#x2611; &nbsp; ) `Mute my mic when joining meeting`
 3. Schedule your computer to wake up automatically atleast 12-15 minutes before the beginning of every class slot. Instructions for this can be found here: [MAC](https://support.apple.com/guide/mac-help/schedule-mac-desktop-computer-turn-mchlp2266/mac#:~:text=On%20your%20Mac%2C%20choose%20Apple,Energy%20Saver%20%2C%20then%20click%20Schedule.&text=Select%20the%20options%20you%20want,a%20time%2C%20then%20click%20Apply.) and [WINDOWS](https://www.howtogeek.com/119028/how-to-make-your-pc-wake-from-sleep-automatically/#:~:text=To%20do%20so%2C%20head%20to,it's%20set%20to%20%E2%80%9CEnable.%E2%80%9D)
 4. Make a [Crontab file](https://www.jcchouinard.com/python-automation-with-cron-on-mac/) (for MAC) which contains the following text:
 ```
