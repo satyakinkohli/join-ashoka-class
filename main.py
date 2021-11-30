@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from datetime import datetime
 import config
 
@@ -52,7 +53,7 @@ def extracting_timetable():
     # extracting html table including header and grid of what classes at what time
     WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="divData"]/table/tbody')))
     content = driver.page_source
-    soup = BeautifulSoup(content, "lxml")
+    soup = BeautifulSoup(content, 'html.parser')
 
     timetableHead = soup.find_all("thead")
     tdHead = timetableHead[0].find_all("td")
@@ -72,21 +73,14 @@ def extracting_timetable():
 def selecting_correct_class_time(classes):
     # finding nearest possible class match according to the current time
 
-    # # automatic -------------------
-    # now = datetime.now()
-    # # automatic -------------------
-    # # manual -------------------
-    now1 = datetime.strptime('17-Nov-2021', '%d-%b-%Y')
-    now = now1.replace(hour=16, minute=28)
-    # # manual -------------------
+    now = datetime.now()
+    # # for testing purposes -------------------
+    # p_now = datetime.strptime('01-Dec-2021', '%d-%b-%Y')
+    # now = p_now.replace(hour=10, minute=7)
+    # # for testing purposes -------------------
 
-    # # automatic -------------------
-    # day = now.strftime("%A %d-%b-%Y")
-    # dayRow = 8 if (day.split())[0] == "Sunday" else int(now.strftime("%w")) + 1
-    # # automatic -------------------
-    # # manual -------------------
-    dayRow = 4
-    # # manual -------------------
+    day = now.strftime("%A %d-%b-%Y")
+    dayRow = 8 if (day.split())[0] == "Sunday" else int(now.strftime("%w")) + 1
 
     time = now.strftime("%I:%M %p")
 
@@ -113,15 +107,9 @@ def opening_class_link(classes, timeRow, dayRow):
     if classes[timeRow][dayRow - 1] == "":
         return
 
-    # # automatic -------------------
-    # driver.find_element(By.XPATH, f'//*[@id="divData"]/table/tbody/tr[{timeRow}]/td[{dayRow}]/div/p[4]/a').click()
-    # window_after = driver.window_handles[1]
-    # driver.switch_to.window(window_after)
-    # # automatic -------------------
-    # # manual -------------------
-    URL1 = 'https://meet.google.com/afd-vkqo-sqf'
-    driver.get(URL1)
-    # # manual -------------------
+    driver.find_element(By.XPATH, f'//*[@id="divData"]/table/tbody/tr[{timeRow}]/td[{dayRow}]/div/p[4]/a').click()
+    window_after = driver.window_handles[1]
+    driver.switch_to.window(window_after)
 
     if driver.current_url[0:4] == "zoom" or driver.current_url[8:12] == "zoom":
         zoom()
@@ -155,6 +143,10 @@ if __name__ == '__main__':
     # been used
     chrome_options.add_argument("use-fake-ui-for-media-stream")
     chrome_options.add_experimental_option("detach", True)
-    driver = webdriver.Chrome(options=chrome_options)
+
+    # # if running main.py from the command line (manually)
+    # driver = webdriver.Chrome(service=Service("/usr/local/bin/chromedriver"), options=chrome_options)
+    # # if running main.py using cron
+    driver = webdriver.Chrome(service=Service("/usr/local/bin/chromedriver"), options=chrome_options)
 
     execute()

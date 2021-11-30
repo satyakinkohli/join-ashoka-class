@@ -1,5 +1,4 @@
-venv/
+\venv
 *.pyc
 */.idea
 config.py
-test.py
