@@ -40,8 +40,8 @@ PYTHONPATH=<location-of-modules-imported-in-main.py>
 This is what it looked like for me:
 ```
 PYTHONPATH=/Users/satyakinkohli/PycharmProjects/Join-AshokaClass/venv/lib/python3.9/site-packages
-26 8,16 * * 1-5 /usr/bin/python3 /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/main.py > /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/log.txt 2>&1
-6 10,18 * * 1-5 /usr/bin/python3 /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/main.py > /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/log.txt 2>&1
-46 11,14 * * 1-5 /usr/bin/python3 /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/main.py > /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/log.txt 2>&1
+26 8,16 * * 1-5 /usr/bin/python3 /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/main.py > /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/log1.txt 2>&1
+6 10,18 * * 1-5 /usr/bin/python3 /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/main.py > /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/log2.txt 2>&1
+46 11,14 * * 1-5 /usr/bin/python3 /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/main.py > /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/log3.txt 2>&1
 ```
 More details on how to write Cron schedule expressions can be found [here](https://crontab.guru).
