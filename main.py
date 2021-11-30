@@ -145,7 +145,7 @@ if __name__ == '__main__':
     chrome_options.add_experimental_option("detach", True)
 
     # # if running main.py from the command line (manually)
-    # driver = webdriver.Chrome(service=Service("/usr/local/bin/chromedriver"), options=chrome_options)
+    # driver = webdriver.Chrome("/usr/local/bin/chromedriver", options=chrome_options)
     # # if running main.py using cron
     driver = webdriver.Chrome(service=Service("/usr/local/bin/chromedriver"), options=chrome_options)
 
