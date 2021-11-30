@@ -30,8 +30,8 @@ password = '<password>'
 ```
 PYTHONPATH=<location-of-modules-imported-in-main.py>
 26 8,16 * * 1-5 <location-of-python3> <location-of-main.py> > <location-of-log-file-1-which-will-be-created> 2>&1
-6 10,18 * * 1-5 <location-of-python3> <location-of-main.py> > <location-of-log-file-1-which-will-be-created> 2>&1
-46 11,14 * * 1-5 <location-of-python3> <location-of-main.py> > <location-of-log-file-1-which-will-be-created> 2>&1
+6 10,18 * * 1-5 <location-of-python3> <location-of-main.py> > <location-of-log-file-2-which-will-be-created> 2>&1
+46 11,14 * * 1-5 <location-of-python3> <location-of-main.py> > <location-of-log-file-3-which-will-be-created> 2>&1
 ```
 This is what it looked like for me:
 ```
