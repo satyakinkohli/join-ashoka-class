@@ -6,7 +6,7 @@ Have a class at the devilish time of 8:30 AM? Perhaps a late lunch means your cl
 
 A ***<ins>combination of CRONTAB and python scripts</ins>*** allows you to automatically join your class at Ashoka University (duh, you got to be enrolled at the Univeristy!).
 - The *CRONTAB script* executes the following function:
-  1. run the python script every Monday to Friday at 8:26 AM, 10:06 AM, 11:46 AM, 2:46 PM, 4:26 PM and 6:06 PM (i.e. 4 minutes before any class starts).
+  1. run the python script every day-of-week from Monday through Friday at 8:26 AM, 10:06 AM, 11:46 AM, 2:46 PM, 4:26 PM and 6:06 PM (i.e. 4 minutes before every class slot).
 
 - The *python script* executes the following functions:
   1. log in to [AMS](http://ams.ashoka.edu.in/Contents/StudentDashboard.aspx) through your Google account
@@ -26,7 +26,18 @@ password = '<password>'
   - In the Zoom app, go to SETTINGS > AUDIO and check `Automatically join computer audio when joinnig a meeting`
   - In the Zoom app, go to SETTINGS > AUDIO and check `Mute my mic when joining meeting`
 3. Schedule your computer to wake up automatically atleast 12-15 minutes before the beginning of every class slot. Instructions for this can be found here: [MAC](https://support.apple.com/guide/mac-help/schedule-mac-desktop-computer-turn-mchlp2266/mac#:~:text=On%20your%20Mac%2C%20choose%20Apple,Energy%20Saver%20%2C%20then%20click%20Schedule.&text=Select%20the%20options%20you%20want,a%20time%2C%20then%20click%20Apply.) and [WINDOWS](https://www.howtogeek.com/119028/how-to-make-your-pc-wake-from-sleep-automatically/#:~:text=To%20do%20so%2C%20head%20to,it's%20set%20to%20%E2%80%9CEnable.%E2%80%9D)
-4. Make a [CRONTAB file](https://www.jcchouinard.com/python-automation-with-cron-on-mac/) (for MAC) which contains the following text:
+4. Make a [Crontab file](https://www.jcchouinard.com/python-automation-with-cron-on-mac/) (for MAC) which contains the following text:
 ```
-Eventually
+PYTHONPATH=<location-of-modules-imported-in-main.py>
+26 8,16 * * 1-5 <location-of-python3> <location-of-main.py> > <location-of-log-file-1-which-will-be-created> 2>&1
+6 10,18 * * 1-5 <location-of-python3> <location-of-main.py> > <location-of-log-file-1-which-will-be-created> 2>&1
+46 11,14 * * 1-5 <location-of-python3> <location-of-main.py> > <location-of-log-file-1-which-will-be-created> 2>&1
 ```
+This is what it looked like for me:
+```
+PYTHONPATH=/Users/satyakinkohli/PycharmProjects/Join-AshokaClass/venv/lib/python3.9/site-packages
+26 8,16 * * 1-5 /usr/bin/python3 /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/main.py > /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/log.txt 2>&1
+6 10,18 * * 1-5 /usr/bin/python3 /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/main.py > /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/log.txt 2>&1
+46 11,14 * * 1-5 /usr/bin/python3 /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/main.py > /Users/satyakinkohli/PycharmProjects/Join-AshokaClass/log.txt 2>&1
+```
+More details on how to write Cron schedule expressions can be found [here](https://crontab.guru).
