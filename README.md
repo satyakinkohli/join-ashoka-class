@@ -23,7 +23,7 @@ driver = webdriver.Chrome(service=Service("<location-of-chromedriver>"), options
 2. Make a file named `config.py` in the same directory as `main.py`. This file would contain your Google account's credentials, in the following format:
 ```
 username = '<ashoka-email-id>'
-password = '<password>'
+password = '<ashoka-email-password>'
 ```
 3. Configure Zoom settings (required specifically for Zoom classes)
   - In the Zoom app, go to Settings > Video and check ( &#x2611; &nbsp;) `Stop my video when joining a meeting`
