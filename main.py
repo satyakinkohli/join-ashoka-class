@@ -76,7 +76,7 @@ def selecting_correct_class_time(classes):
     now = datetime.now()
     # # for testing purposes -------------------
     # p_now = datetime.strptime('01-Dec-2021', '%d-%b-%Y')
-    # now = p_now.replace(hour=10, minute=7)
+    # now = p_now.replace(hour=14, minute=47)
     # # for testing purposes -------------------
 
     day = now.strftime("%A %d-%b-%Y")
@@ -131,6 +131,7 @@ def meet():
 
 
 def zoom():
+
     return
 
 

@@ -26,6 +26,7 @@ username = '<ashoka-email-id>'
 password = '<ashoka-email-password>'
 ```
 3. Configure Zoom settings (required specifically for Zoom classes)
+  - Go to Options and enable 'Open at Login'
   - In the Zoom app, go to Settings > Video and check ( &#x2611; &nbsp;) `Stop my video when joining a meeting`
   - In the Zoom app, go to Settings > Audio and check ( &#x2611; &nbsp;) `Automatically join computer audio when joinnig a meeting`
   - In the Zoom app, go to Settings > Audio and check ( &#x2611; &nbsp;) `Mute my mic when joining meeting`
