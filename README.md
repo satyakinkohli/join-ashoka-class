@@ -2,7 +2,7 @@
 
 Have a class at the devilish time of 8:30 AM? Perhaps a late lunch means your class at 2:50 PM is a bit of a pain-in-the-ass? Or, simply, is going to online classes just not your thing? There is something that could help.
 
-<a href="https://youtu.be/0baaP0oFj84" rel="noreferrer noopener" target="_blank"><img src="https://github.com/satyakinkohli/Ashoka_AP2/blob/main/Ashoka_AP2.png" alt="Youtube link for project video" width="100%" height="100%" border="10" /></a>
+<a href="https://youtu.be/0baaP0oFj84" rel="noreferrer noopener" target="_blank"><img src="https://github.com/satyakinkohli/join-ashoka-class/blob/main/JAC-play-button.png" alt="Youtube link for project video" width="100%" height="100%" border="10" /></a>
 
 ## Working Explained
 
